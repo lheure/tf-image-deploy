@@ -10,3 +10,14 @@ resource "azurerm_virtual_network" "vnet-01" {
     }
 }
 
+data "azurerm_virtual_network" "rg-management-vnet" {
+  name                 = "rg-management-vnet"
+  resource_group_name  = "rg-management"
+}
+
+resource "azurerm_virtual_network_peering" "vnetpeer-visioniaas-to-mgmt" {
+  name                      = "vnetpeer-visioniaas-to-mgmt"
+  resource_group_name       = "rg-visioncloud-iaas-stg"
+  virtual_network_name      = "${azurerm_virtual_network.vision-poc-vnet-01.name}"
+  remote_virtual_network_id = "${azurerm_virtual_network.rg-management-vnet.id}"
+}

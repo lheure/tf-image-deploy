@@ -1,5 +1,6 @@
 data "azurerm_resource_group" "s1uw2-prx001" {
-  name = "/subscriptions/2b9d8a3b-eb6c-455c-a6b8-71c72a38ef37/resourceGroups/rg-zconverter-work/providers/Microsoft.Compute/images/s1uw2-prx001-custom-image"
+  #name = "/subscriptions/2b9d8a3b-eb6c-455c-a6b8-71c72a38ef37/resourceGroups/rg-zconverter-work/providers/Microsoft.Compute/images/s1uw2-prx001-custom-image"
+  name = "s1uw2-prx001-custom-image"
 }
 
 data "azurerm_image" "s1uw2-prx001" { 

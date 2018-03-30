@@ -8,7 +8,7 @@ provider "azurerm" {
 
 # Create a resource group if it doesn’t exist
 resource "azurerm_resource_group" "rg-01" {
-    name     = "${var.prefix}-rg"
+    name     = "rg-visioncloud-iaas-stg"
     location = "${var.location}"
 
     tags {

@@ -7,7 +7,7 @@ resource "azurerm_network_security_group" "sub-pri-papi-nsg" {
 
 resource "azurerm_network_security_rule" "sub-pri-papi-nsgrule-4222" {
   name                        = "sub-pri-papi-nsgrule-4222"
-  priority                    = 4222
+  priority                    = 1000
   direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"

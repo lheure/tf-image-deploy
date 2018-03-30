@@ -1,11 +1,11 @@
-data "azurerm_resource_group" "s1uw2-prx001" {
+data "azurerm_resource_group" "rg-zconverter-work" {
   #name = "/subscriptions/2b9d8a3b-eb6c-455c-a6b8-71c72a38ef37/resourceGroups/rg-zconverter-work/providers/Microsoft.Compute/images/s1uw2-prx001-custom-image"
-  name = "s1uw2-prx001-custom-image"
+  name = "rg-zconverter-work"
 }
 
 data "azurerm_image" "s1uw2-prx001" { 
     name = "s1uw2-prx001" 
-    resource_group_name = "${data.azurerm_resource_group.s1uw2-prx001.name}"
+    resource_group_name = "${data.azurerm_resource_group.rg-zconverter-work.name}"
 }
 
 # data "azurerm_image" "s1uw2-papi001" { name = "s1uw2-papi001" }

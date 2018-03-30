@@ -8,9 +8,9 @@ data "azurerm_image" "s1uw2-prx001-custom-image" {
     resource_group_name = "${data.azurerm_resource_group.rg-zconverter-work.name}"
 }
 
-output "s1uw2-prx001-custom-image_id" {
-    value = "${data.azurerm_image.s1uw2-prx001-custom-image.id}"
-}
+# output "s1uw2-prx001-custom-image-id" {
+#     value = "${data.azurerm_image.s1uw2-prx001-custom-image.id}"
+# }
 
 # data "azurerm_image" "s1uw2-papi001" { name = "s1uw2-papi001" }
 

@@ -9,6 +9,7 @@ resource "azurerm_network_security_group" "sub-pub-nsg" { name = "sub-pub-nsg" l
 
 
 
+
 resource "azurerm_network_security_rule" "sub-pri-papi-nsgrule-4222" {
   name                        = "sub-pri-papi-nsgrule-4222"
   priority                    = 1000

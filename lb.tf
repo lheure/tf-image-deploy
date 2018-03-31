@@ -43,3 +43,5 @@ resource "azurerm_lb_rule" "s1uw2-ielb-papi-rule" {
   probe_id                       = "${azurerm_lb_probe.s1uw2-ielb-papi-probe.id}"
   depends_on                     = ["azurerm_lb_probe.s1uw2-ielb-papi-probe"]
 }
+
+

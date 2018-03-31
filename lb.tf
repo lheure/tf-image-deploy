@@ -43,7 +43,7 @@ resource "azurerm_lb_probe" "s1uw2-ielb-pmat-probe" { resource_group_name = "${a
 
 resource "azurerm_lb_probe" "s1uw2-ielb-papi-probe" { resource_group_name = "${azurerm_resource_group.rg-01.name}" loadbalancer_id = "${azurerm_lb.s1uw2-ielb-papi.id}" name = "s1uw2-ielb-papi-probe" port = 10080 }
 
-
+ 
 
 
 

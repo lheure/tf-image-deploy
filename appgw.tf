@@ -35,7 +35,7 @@ resource "azurerm_application_gateway" "s1uw2-elb-frnt" {
 
   frontend_port {
       name         = "s1uw2-elb-frnt-fport"
-      port         = 443
+      port         = 10080
   }
 
   frontend_ip_configuration {

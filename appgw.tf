@@ -14,7 +14,7 @@ resource "azurerm_public_ip" "s1uw2-elb-frnt-pip" {
   name                         = "s1uw2-elb-frnt-pip"
   location                     = "${var.location}"
   resource_group_name          = "${azurerm_resource_group.rg-01.name}"
-  public_ip_address_allocation = "Static"
+  public_ip_address_allocation = "dynamic"
 }
 
 resource "azurerm_application_gateway" "s1uw2-elb-frnt" {

@@ -44,7 +44,7 @@ resource "azurerm_application_gateway" "s1uw2-elb-frnt" {
   }
 
   backend_address_pool {
-      name = "s1uw2-elb-frnt-pip-bpool"
+      name = "s1uw2-elb-frnt-bpool"
   }
 
   backend_http_settings {

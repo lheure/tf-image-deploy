@@ -2,7 +2,7 @@
 # application gateway 로 구성
 
 resource "azurerm_subnet" "sub-pub-appgw" {
-  name                 = "my-subnet-1"
+  name                 = "sub-pub-appgw"
   resource_group_name  = "${azurerm_resource_group.rg-01.name}"
   virtual_network_name = "${azurerm_virtual_network.vnet-01.name}"
   address_prefix       = "10.200.5.0/24"

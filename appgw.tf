@@ -45,6 +45,7 @@ resource "azurerm_application_gateway" "s1uw2-elb-frnt" {
 
   backend_address_pool {
       name = "s1uw2-elb-frnt-bpool"
+      ip_address_list = ["10.200.50.197","10.200.51.149"]
   }
 
   backend_http_settings {

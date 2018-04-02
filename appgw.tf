@@ -51,7 +51,7 @@ resource "azurerm_application_gateway" "s1uw2-elb-frnt" {
       name                  = "s1uw2-elb-frnt-bpool-http"
       cookie_based_affinity = "Disabled"
       port                  = 10080
-      protocol              = "Https"
+      protocol              = "Http"
       request_timeout        = 1
   }
 
@@ -59,7 +59,7 @@ resource "azurerm_application_gateway" "s1uw2-elb-frnt" {
         name                                  = "s1uw2-elb-frnt-httplstn"
         frontend_ip_configuration_name        = "s1uw2-elb-frnt-pip"
         frontend_port_name                    = "s1uw2-elb-frnt-fport"
-        protocol                              = "Https"
+        protocol                              = "Http"
   }
 
   request_routing_rule {

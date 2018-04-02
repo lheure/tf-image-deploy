@@ -9,6 +9,7 @@ resource "azurerm_subnet" "sub-pub-appgw" {
 }
 
 
+
 resource "azurerm_public_ip" "s1uw2-elb-frnt-pip" {
   name                         = "s1uw2-elb-frnt-pip"
   location                     = "${var.location}"

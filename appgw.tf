@@ -30,7 +30,7 @@ resource "azurerm_application_gateway" "s1uw2-elb-frnt" {
 
   gateway_ip_configuration {
       name         = "s1uw2-elb-frnt-pip-gwip"
-      subnet_id    = "${azurerm_subnet.sub-pub-appgw.name}"
+      subnet_id    = "${azurerm_virtual_network.vnet-01.id}/subnets/${azurerm_subnet.sub-pub-appgw.name}"
   }
 
   frontend_port {
